@@ -1,0 +1,10 @@
+kivy
+kivy-deps.angle
+kivy-deps.glew
+kivy-deps.sdl2
+kivymd
+opencv-python
+numpy
+face-recognition
+dlib
+sqlite3

@@ -1,0 +1,188 @@
+
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #202020;
+    color: #fff;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 36px;
+}
+
+/* ================= PROJECT CONTAINER ================= */
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 100px;
+}
+
+/* ================= PROJECT ROW ================= */
+
+.project-row {
+    display: flex;
+    flex-direction: row;   /* 🔥 LEFT VIDEO + RIGHT TEXT */
+    gap: 30px;
+
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 16px;
+
+    align-items: center;
+
+    transition: 0.3s ease;
+}
+
+/* hover */
+.project-row:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.08);
+}
+
+/* ================= VIDEO ================= */
+
+.project-media {
+    flex: 1;
+}
+
+.project-media video {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* ================= TEXT ================= */
+
+.project-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-text h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-text p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* ================= READ MORE ================= */
+
+.more-text {
+    display: none;
+}
+
+.project-text.active .more-text {
+    display: inline;
+}
+
+.project-text.active .dots {
+    display: none;
+}
+
+/* ================= BUTTONS ================= */
+
+.read-btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: cyan;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-start;
+    transition: 0.3s;
+}
+
+.read-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+.rep-btn {
+    background: transparent;
+    border: none;
+    color: cyan;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    position: relative;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+/* underline animation */
+.rep-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 2px;
+    background: cyan;
+
+    transition: width 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.rep-btn:hover {
+    color: white;
+}
+
+.rep-btn:hover::after {
+    width: 100%;
+}
+
+/* ================= BACK BUTTON ================= */
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-btn:hover {
+    color: white;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .projects-grid {
+        padding: 20px;
+    }
+
+    .project-row {
+        flex-direction: column; /* stack on mobile */
+    }
+
+    .project-text {
+        text-align: center;
+    }
+
+    .read-btn {
+        align-self: center;
+    }
+}
