@@ -1,0 +1,21 @@
+# Jekyll configuration for GitHub Pages
+title: Tech Soban AI Portfolio
+description: Muhammad Soban Sarmad - AI and Full Stack Developer
+author: Muhammad Soban Sarmad
+url: https://muhammad-soban-sarmad.github.io/Portfolio
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Enable gzip compression
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  startings: []
+
+# SEO settings
+lang: en_US

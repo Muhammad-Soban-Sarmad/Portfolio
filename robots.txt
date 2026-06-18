@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /Portfolio/
+Disallow: /Portfolio/About_Images/
+Disallow: /Portfolio/Project_Videos/
+Disallow: /Portfolio/Projects_Screenshots/
+
+Sitemap: https://muhammad-soban-sarmad.github.io/Portfolio/sitemap.xml
